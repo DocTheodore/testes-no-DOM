@@ -4,4 +4,91 @@
     font-family: 'Roboto', sans-serif;
 }
 
+body, html, h1, h2, h3{
+    margin: 0;
+    padding: 0;
+}
+
+.destaque{
+    text-align: center;
+    font-size: 20px;
+}
+.destaque h1, h2, h3{
+    font-size: 30px !important;
+}
+
 /*/ separa os valores dos itens /*/
+.loja, .inventario{
+    margin: 0 2em;
+}
+
+.item{
+    display: inline-block;
+    margin: 1em 5em;
+    background-color: rgba(135, 207, 235, 0.363);
+    padding: 7px;
+    border: 3px solid rgba(51, 51, 51, 0.75);
+}
+
+.item-imagem{
+    width: 175px;
+    height: auto;
+}
+
+.item-nome{
+    display: block;
+    font-weight: bold;
+}
+
+.item-preço{
+    font-weight: 300;
+}
+
+.item-botao-compra{
+    border: none;
+    padding: .4em;
+    background-color: rgb(111, 198, 252);
+    color: rgb(255, 255, 255);
+    float: right;
+}
+.item-botao-compra:hover{
+    cursor: pointer;
+    background-color: rgb(46, 148, 211);
+}
+
+/*/ area de compras aceitas\inventario /*/
+.dinheiro{
+    margin: 5px 1em;
+    display: inline-block;
+    color: rgba(51, 51, 51, 0.75);
+    background-color: yellow;
+    border: 3px solid rgb(211, 211, 16);
+    padding: .25em .5em;
+}
+
+.item-comprado{
+    display: inline-block;
+    margin: 1em 2em;
+    border: 3px solid rgba(51, 51, 51, 0.75);
+}
+
+.item-comprado-titulo{
+    display: inline-block;
+    padding: 0 10px;
+    margin-right: 5em;
+    margin-top: 10px;
+}
+
+.item-comprado-imagem{
+    display: inline-block;
+    width: 90px;
+    height: auto;
+    border-radius: 75%;
+}
+.item-comprado-nome{
+    float: right;
+    margin-top: 35px;
+    margin-left: 20px;
+    text-align: center;
+    font-weight: bold;
+}
