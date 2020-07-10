@@ -25,9 +25,13 @@ function comprarItem(event){
     let seuCredito = document.getElementsByClassName("dinheiro")[0];
     let credito = parseFloat(seuCredito.innerText.replace(" GP", ""));
 
-    if((credito - valor) < 0) return;
+    if((credito - valor) < 0){
+        alert('obrigado e volte sempre!')
+        window.location.replace(window.location.pathname + window.location.search + window.location.hash);
+        return;
+    }
     adicionarItemParaInventario(itemNome, itemImagem);
-    total(credito - valor);
+    total(credito, valor);
     return;
 }
 
@@ -47,9 +51,6 @@ function adicionarItemParaInventario(itemNome, itemImagem){
     inventario.append(novaLinha);
 }
 
-function troca(event){
-}
-
-function total(credito){
-    console.log(credito);
+function total(credito, valor){
+    document.getElementsByClassName("dinheiro")[0].innerText = (credito - valor) + " GP";
 }
